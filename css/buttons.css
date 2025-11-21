@@ -1,0 +1,90 @@
+/* ==========================================
+   BOUTONS
+   ========================================== */
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-download {
+  background: #28a745;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-download:hover {
+  background: #218838;
+}
+
+.btn-secondary {
+  background: var(--text-lighter);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover {
+  background: var(--text-light);
+}
+
+/* ==========================================
+   BOUTON RETOUR EN HAUT
+   ========================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: var(--bg-white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-speed);
+  z-index: 999;
+  box-shadow: var(--shadow-medium);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+

@@ -1,0 +1,64 @@
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../images/banniere.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 0;
+}
+
+#hero .content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#hero .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--bg-white);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all var(--transition-speed);
+  box-shadow: var(--shadow-medium);
+}
+
+#hero .btn:hover {
+  background: var(--bg-gray);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+

@@ -1,0 +1,128 @@
+/* ==========================================
+   MODALE DE VISUALISATION DES DOCUMENTS
+   ========================================== */
+.doc-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.doc-modal.active {
+  display: block;
+}
+
+.doc-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.doc-modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 1400px;
+  height: 95vh;
+  margin: 2.5vh auto;
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.doc-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.doc-modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.doc-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.doc-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.doc-modal-body {
+  flex: 1;
+  overflow: hidden;
+  padding: 0;
+  background: var(--bg-gray);
+  position: relative;
+}
+
+.doc-viewer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #525659;
+}
+
+.doc-viewer {
+  width: 100%;
+  height: 100%;
+  background: #525659;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.doc-viewer embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.doc-modal-footer {
+  padding: 15px 20px;
+  background: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+

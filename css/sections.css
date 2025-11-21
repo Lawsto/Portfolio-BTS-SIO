@@ -1,0 +1,333 @@
+/* ==========================================
+   SECTIONS GÉNÉRALES
+   ========================================== */
+main {
+  margin-top: 0;
+  width: 100%;
+}
+
+section {
+  padding: 80px 0;
+  width: 100%;
+}
+
+section > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  position: relative;
+  padding-bottom: 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+section p {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Alternance des couleurs de fond */
+main section:nth-child(odd) {
+  background-color: var(--bg-gray);
+}
+
+main section:nth-child(even) {
+  background-color: var(--bg-white);
+}
+
+/* Animation au scroll */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   SECTION À PROPOS
+   ========================================== */
+#about {
+  text-align: center;
+}
+
+#about p {
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#about .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all var(--transition-speed);
+}
+
+#about .btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ==========================================
+   BTS SIO - OPTIONS
+   ========================================== */
+#bts-sio .options {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-wrap: wrap;
+}
+
+#bts-sio .option {
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  padding: 25px;
+  background-color: var(--bg-lighter);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  transition: all var(--transition-speed);
+}
+
+#bts-sio .option:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+#bts-sio .option h3 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+#bts-sio .option p {
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   DOCUMENTATIONS
+   ========================================== */
+.doc-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.doc-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 280px;
+  min-height: 280px;
+  background-color: var(--bg-lighter);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  color: var(--text-color);
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-speed);
+  cursor: pointer;
+  position: relative;
+}
+
+.doc-box:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.doc-box img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  transition: transform var(--transition-speed);
+}
+
+.doc-box:hover img {
+  transform: scale(1.1);
+}
+
+.doc-box h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.doc-box p {
+  font-size: 1rem;
+  color: var(--text-lighter);
+}
+
+/* ==========================================
+   VEILLE TECHNOLOGIQUE
+   ========================================== */
+#veille-technologique h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#veille-technologique p {
+  text-align: justify;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#veille-technologique ul {
+  list-style: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+#veille-technologique ul li {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+}
+
+#veille-technologique ul li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.veille-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tool {
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  padding: 20px;
+  background: #e3f2fd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-speed);
+}
+
+.tool:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.tool h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.tool p {
+  text-align: justify;
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-lighter);
+}
+
+footer p {
+  margin: 0;
+}
+
