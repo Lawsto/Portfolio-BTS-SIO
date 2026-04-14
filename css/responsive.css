@@ -142,9 +142,25 @@
   .veille-tools {
     flex-direction: column;
   }
-  
+
   .tool {
     max-width: 100%;
+  }
+
+  #veille-technologique h3 {
+    font-size: 1.4rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #veille-technologique h3::after {
+    left: 15px;
+  }
+
+  #veille-technologique p,
+  #veille-technologique ul {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   
   .doc-container {
@@ -198,6 +214,19 @@
     width: 45px;
     height: 45px;
     font-size: 1.3rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links span {
+    display: none;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
   }
 }
 

@@ -1,7 +1,4 @@
 /**
- * Portfolio - Fouarge Etienne
- * BTS SIO - SISR
- * 
  * Fichier principal - Point d'entrée de l'application
  */
 

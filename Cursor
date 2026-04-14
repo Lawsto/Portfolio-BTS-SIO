@@ -1,0 +1,4 @@
+Ce fichier existe uniquement pour contourner un problème de commande `git commit`
+où un argument `Cursor` est injecté et interprété comme un chemin (pathspec).
+
+Il peut être supprimé une fois le problème corrigé dans la configuration/outillage.

@@ -21,7 +21,7 @@ export function initDocumentModal() {
   
   if (!modal || docBoxes.length === 0) return;
   
-  // Ouvrir la modale au clic - VERSION ULTRA SIMPLIFIÉE
+  // Ouvrir la modale au clic 
   docBoxes.forEach(box => {
     box.addEventListener('click', (e) => {
       e.preventDefault();
@@ -37,12 +37,12 @@ export function initDocumentModal() {
     }, { passive: false });
   });
   
-  // Fermer la modale - VERSION INSTANTANÉE
+  // Fermer la modale 
   function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
     
-    // Nettoyage immédiat (pas d'attente)
+    // Nettoyage immédiat 
     docViewer.innerHTML = '';
     currentDocUrl = '';
     currentDocType = '';
@@ -62,17 +62,17 @@ export function initDocumentModal() {
     }
   });
   
-  // Ouvrir la modale - VERSION ULTRA RAPIDE
+  // Ouvrir la modale 
   function openModal(docUrl, docType, docTitle) {
     modalTitle.textContent = docTitle || 'Document';
     
-    // Afficher et charger simultanément (pas d'attente)
+    // Afficher et charger simultanément 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     loadDocument(docUrl, docType);
   }
   
-  // Charger le document - VERSION ULTRA OPTIMISÉE
+  // Charger le document 
   function loadDocument(url, type) {
     if (type === 'pdf') {
       // Pas de loader, affichage direct pour performance maximale

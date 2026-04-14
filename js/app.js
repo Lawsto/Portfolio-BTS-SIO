@@ -1,8 +1,3 @@
-/**
- * Portfolio - Fouarge Etienne
- * Version sans modules ES6 (compatible ouverture directe)
- */
-
 // ==========================================
 // NAVIGATION
 // ==========================================
@@ -485,7 +480,84 @@ if (window.performance && window.performance.timing) {
 // INITIALISATION
 // ==========================================
 
+/**
+ * Gestion de l'accordéon pour tous les projets
+ */
+function initProjetAccordion() {
+  const toggleBtns = document.querySelectorAll('.projet-toggle-btn');
+  
+  if (toggleBtns.length === 0) return;
+  
+  toggleBtns.forEach(toggleBtn => {
+    const controlsId = toggleBtn.getAttribute('aria-controls');
+    const detailsSection = document.getElementById(controlsId);
+    
+    if (!detailsSection) return;
+    
+    toggleBtn.addEventListener('click', () => {
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      
+      if (isExpanded) {
+        // Fermer
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        detailsSection.classList.remove('show');
+        const toggleText = toggleBtn.querySelector('.toggle-text');
+        if (toggleText) {
+          toggleText.textContent = 'Voir plus de détails';
+        }
+      } else {
+        // Ouvrir
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        detailsSection.classList.add('show');
+        const toggleText = toggleBtn.querySelector('.toggle-text');
+        if (toggleText) {
+          toggleText.textContent = 'Voir moins de détails';
+        }
+      }
+    });
+  });
+}
+
+/**
+ * Gestion du sidebar (menu latéral)
+ */
+function initSidebar() {
+  const sidebarToggle = document.querySelector('.sidebar-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  
+  if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      const isOpen = sidebar.classList.contains('open');
+      sidebarToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  // Fermer le sidebar au clic sur un lien (mobile)
+  const sidebarLinks = document.querySelectorAll('.sidebar-menu a');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove('open');
+        sidebarToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Mettre à jour le lien actif selon la page
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  sidebarLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initSidebar();
   initSmoothScrolling();
   initFooterYear();
   initScrollAnimations();
@@ -494,5 +566,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initDocumentModal();
   initLazyLoading();
+  initProjetAccordion();
 });
 

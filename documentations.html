@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentations techniques - Portfolio d'Etienne Fouarge">
+  <title>Documentations - Portfolio Etienne Fouarge</title>
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" role="navigation" aria-label="Navigation principale">
+    <div class="sidebar-header">
+      <div class="logo" aria-label="Logo du site">Fouarge Etienne</div>
+      <button class="sidebar-toggle" aria-label="Réduire le menu" aria-expanded="true">
+        <span>☰</span>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <ul class="sidebar-menu">
+        <li><a href="index.html">À propos</a></li>
+        <li><a href="parcours.html">Mon Parcours</a></li>
+        <li><a href="experiences.html">Expériences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="documentations.html" class="active">Documentations</a></li>
+        <li><a href="veille-technologique.html">Veille Technologique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-wrapper">
+    <main>
+      <section class="page-section">
+        <h2>Documentations</h2>
+        <p>Découvrez les documentations détaillées de mes projets et configurations.</p>
+
+        <div class="doc-container">
+            <div class="doc-box" data-doc="documents/WindowsServeur.pdf" data-doc-type="pdf" data-doc-title="Installation de Windows Server">
+                <img src="images/windowsserveur2016.png" alt="Document PDF">
+                <h3>Installation de Windows Server</h3>
+                <p>Guide détaillé pour installer et configurer Windows Server 2016.</p>
+            </div>
+            
+            <div class="doc-box" data-doc="documents/DocAP3.pdf" data-doc-type="pdf" data-doc-title="Documentation AP3">
+                <img src="images/windowsserveur2016.png" alt="Document PDF">
+                <h3>Documentation AP3</h3>
+                <p>Documentation technique du projet AP3.</p>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modale de visualisation des documents -->
+    <div id="doc-modal" class="doc-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="doc-modal-overlay"></div>
+        <div class="doc-modal-content">
+            <div class="doc-modal-header">
+                <h3 id="modal-title" class="doc-modal-title">Document</h3>
+                <button class="doc-modal-close" aria-label="Fermer la modale">&times;</button>
+            </div>
+            <div class="doc-modal-body">
+                <div class="doc-viewer-container">
+                    <div id="doc-viewer" class="doc-viewer">
+                        <!-- Le contenu du document sera affiché ici -->
+                    </div>
+                </div>
+            </div>
+            <div class="doc-modal-footer">
+                <button id="open-new-tab-btn" class="btn btn-primary">
+                    <span class="open-icon">↗</span> Ouvrir dans un nouvel onglet
+                </button>
+                <button id="download-doc-btn" class="btn btn-download">
+                    <span class="download-icon">↓</span> Télécharger le document
+                </button>
+                <button class="btn btn-secondary doc-modal-close-btn">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Fouarge Etienne. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <span>|</span>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <span>|</span>
+        <a href="conditions-generales.html">Conditions générales</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bouton retour en haut -->
+  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de la page" title="Retour en haut">
+    ↑
+  </button>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
+

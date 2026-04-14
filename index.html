@@ -33,292 +33,81 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav role="navigation" aria-label="Navigation principale">
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" role="navigation" aria-label="Navigation principale">
+    <div class="sidebar-header">
       <div class="logo" aria-label="Logo du site">Fouarge Etienne</div>
-      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="sidebar-toggle" aria-label="Réduire le menu" aria-expanded="true">
+        <span>☰</span>
       </button>
-      <ul class="nav-menu">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#parcours">Mon Parcours</a></li>
-        <li><a href="#ambition">Ambition</a></li>
-        <li><a href="#bts-sio">BTS SIO</a></li>
-        <li><a href="#documentations">Documentations</a></li>
-        <li><a href="#veille-technologique">Veille Technologique</a></li>
-        <li><a href="#contact">Contact</a></li>
+    </div>
+    <nav class="sidebar-nav">
+      <ul class="sidebar-menu">
+        <li><a href="index.html" class="active">À propos</a></li>
+        <li><a href="parcours.html">Mon Parcours</a></li>
+        <li><a href="experiences.html">Expériences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="documentations.html">Documentations</a></li>
+        <li><a href="veille-technologique.html">Veille Technologique</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </aside>
 
-  <!-- Hero Section -->
-  <section id="hero" aria-label="Bannière d'accueil">
-    <div class="content">
-      <h1>Bonjour, je suis Etienne Fouarge</h1>
-      <p>Étudiant en BTS SIO option SISR - Passionné d'informatique et de réseaux</p>
-      <a href="#about" class="btn" aria-label="En savoir plus sur mon profil">En savoir plus</a>
-    </div>
-  </section>
-
-  <main>
-  <!-- About Section -->
-  <section id="about">
-    <h2>À propos de moi</h2>
-    <p>Bonjour, je m'appelle Etienne Fouarge.
-      actuellement étudiant au Centre de formation IFIDE Sup'Formation  en première année de BTS SIO (Services Informatiques aux Organisations).
-      Actuellement toujours en cours d'étude, je vous propose sur ce portfolio de retrouver ci-dessous les différentes études, et projet professionnel que j'ai pu entreprendre au sein de ma carrière.
-
-      Vous retrouverez ci-dessous mon CV ainsi que mes différents projets :</p>
-      <a href="documents/CV EtienneF.pdf" class="btn" target="_blank"> Télécharger mon CV</a>
-  </section>
- 
-  <!-- parcours Section -->
-  <section id="parcours">
-    <h2>Mon Parcours</h2>
-    <div class="timeline">
-        <!-- BTS SIO -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>BTS SIO</h3>
-                <span class="timeline-date">2024 - A ce jour</span>
-                <p><em>BTS SIO - Option SISR</em></p>
-                <p>IFIDE Sup'Formation - Strasbourg</p>
-            </div>
+  <!-- Main Content -->
+  <div class="main-wrapper">
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="page-hero">
+        <div class="content">
+          <h1>Bonjour, je suis Etienne Fouarge</h1>
+          <p>Étudiant en BTS SIO option SISR - Passionné d'informatique et de réseaux</p>
         </div>
+      </section>
 
-        <!-- Diplôme de rédacteur -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Diplôme de Rédacteur</h3>
-                <span class="timeline-date">2021 - 2024</span>
-                <p><em>Formation en rédaction professionnelle</em></p>
-                <p>Paris</p>
-            </div>
-        </div>
+      <!-- About Section -->
+      <section id="about" class="page-section">
+        <h2>À propos de moi</h2>
+        <p>Bonjour, je m'appelle Etienne Fouarge.
+          actuellement étudiant au Centre de formation IFIDE Sup'Formation  en première année de BTS SIO (Services Informatiques aux Organisations).
+          Actuellement toujours en cours d'étude, je vous propose sur ce portfolio de retrouver ci-dessous les différentes études, et projet professionnel que j'ai pu entreprendre au sein de ma carrière.
 
-        <!-- Gestion de paie -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Formation en Gestion de Paie</h3>
-                <span class="timeline-date">2019 - 2021</span>
-                <p><em>Expérience en gestion de paie</em></p>
-                <p>Geispolsheim</p>
-            </div>
-        </div>
+          Mon objectif professionnel est de devenir administrateur système.
 
-        <!-- Bac Scientifique -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Bac Scientifique</h3>
-                <span class="timeline-date">2016 - 2019</span>
-                <p><em>Bac Scientifique</em></p>
-                <p>Lycée de Strasbourg</p>
-            </div>
-        </div>
-    </div>
-</section>
+          Vous retrouverez ci-dessous mon CV ainsi que mes différents projets :</p>
+          <a href="documents/CV EtienneF.pdf" class="btn" target="_blank"> Télécharger mon CV</a>
+      </section>
 
-
-  <!-- Ambition Section -->
-  <section id="ambition">
-    <h2>Mes Ambitions</h2>
-    <p>Mon objectif est de devenir un administrateur réseau, j’ambitionne d’évoluer au sein d’une entreprise où je pourrais :
-      Participer à des projets ambitieux de transformation numérique, tels que la migration vers le cloud ou l’implémentation d’une infrastructure réseau de nouvelle génération ;
-      Développer mes compétences en cybersécurité pour devenir une référence dans la gestion des risques informatiques.
-      </p>
-  </section>
-
-  <!-- BTS SIO Section -->
-  <section id="bts-sio">
-    <h2>Présentation du BTS SIO</h2>
-    <p>Le BTS Services Informatiques aux Organisations (SIO) est un diplôme national de niveau Bac+2 qui forme des techniciens supérieurs spécialisés dans les métiers de l'informatique. Cette formation se décline en deux options :  </p>
-    
-    <div class="options">
-      <div class="option">
-        <h3>Option SISR</h3>
-        <p>SISR (Solutions d’Infrastructure, Systèmes et Réseaux) : orientée vers l’installation, la gestion et la sécurisation des infrastructures réseau et systèmes informatiques.</p>
-      </div>
-      <div class="option">
-        <h3>Option SLAM</h3>
-        <p>SLAM (Solutions Logicielles et Applications Métier) : axée sur la conception, le développement et la maintenance de logiciels et d'applications.</p>
-      </div>
-    </div>
-  </section>
-
-   <!-- Projets Section (Documents techniques) -->
-   <section id="documentations">
-    <h2>Documentations</h2>
-    <p>Découvrez les documentations détaillées de mes projets et configurations.</p>
-
-    <div class="doc-container">
-        <div class="doc-box" data-doc="documents/WindowsServeur.pdf" data-doc-type="pdf" data-doc-title="Installation de Windows Server">
-            <img src="images/windowsserveur2016.png" alt="Document PDF">
-            <h3>Installation de Windows Server</h3>
-            <p>Guide détaillé pour installer et configurer Windows Server 2016.</p>
-        </div>
+      <!-- BTS SIO Section -->
+      <section id="bts-sio" class="page-section">
+        <h2>Présentation du BTS SIO</h2>
+        <p>Le BTS Services Informatiques aux Organisations (SIO) est un diplôme national de niveau Bac+2 qui forme des techniciens supérieurs spécialisés dans les métiers de l'informatique. Cette formation se décline en deux options :  </p>
         
-        <div class="doc-box" data-doc="documents/DocAP3.pdf" data-doc-type="pdf" data-doc-title="Documentation AP3">
-            <img src="images/windowsserveur2016.png" alt="Document PDF">
-            <h3>Documentation AP3</h3>
-            <p>Documentation technique du projet AP3.</p>
+        <div class="options">
+          <div class="option">
+            <h3>Option SISR</h3>
+            <p>SISR (Solutions d'Infrastructure, Systèmes et Réseaux) : orientée vers l'installation, la gestion et la sécurisation des infrastructures réseau et systèmes informatiques.</p>
+          </div>
+          <div class="option">
+            <h3>Option SLAM</h3>
+            <p>SLAM (Solutions Logicielles et Applications Métier) : axée sur la conception, le développement et la maintenance de logiciels et d'applications.</p>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
+    </main>
 
-<!-- Modale de visualisation des documents -->
-<div id="doc-modal" class="doc-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="doc-modal-overlay"></div>
-    <div class="doc-modal-content">
-        <div class="doc-modal-header">
-            <h3 id="modal-title" class="doc-modal-title">Document</h3>
-            <button class="doc-modal-close" aria-label="Fermer la modale">&times;</button>
-        </div>
-        <div class="doc-modal-body">
-            <div class="doc-viewer-container">
-                <div id="doc-viewer" class="doc-viewer">
-                    <!-- Le contenu du document sera affiché ici -->
-                </div>
-            </div>
-        </div>
-        <div class="doc-modal-footer">
-            <button id="open-new-tab-btn" class="btn btn-primary">
-                <span class="open-icon">↗</span> Ouvrir dans un nouvel onglet
-            </button>
-            <button id="download-doc-btn" class="btn btn-download">
-                <span class="download-icon">↓</span> Télécharger le document
-            </button>
-            <button class="btn btn-secondary doc-modal-close-btn">
-                Fermer
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!-- Veille Technologique Section -->
-    <section id="veille-technologique">
-      <h2>Veille Technologique</h2>
-      
-      <h3>Qu'est-ce que la veille technologique ?</h3>
-  <p>
-    La veille technologique consiste à surveiller en continu les innovations, tendances et évolutions 
-    dans le domaine technologique afin d'identifier les opportunités, de détecter les signaux faibles 
-    et d'anticiper les changements à venir. Cette démarche permet d'évaluer l'impact des nouvelles technologies 
-    sur les industries et d'orienter les décisions stratégiques.
-  </p>
-<br>
-
-<h3>La montée en puissance de l'intelligence artificielle générative</h3>
-<p>
-  L’intelligence artificielle générative est en passe de transformer de nombreux secteurs, en particulier 
-  avec des modèles avancés capables de produire du texte, des images et bien plus encore. Cette avancée repose 
-  sur des algorithmes puissants et une grande quantité de données d’entraînement.
-</p>
-<br>
-
-  <h3>Les principaux outils de ma veille</h3>
-  <p>
-    J'effectue ma veille technologique grâce à des outils tels que <strong>Feedly</strong>, un agrégateur de flux RSS, 
-    et <strong>OpenAI.com</strong>, qui propose des newsletters et des mises à jour sur les tendances technologiques.
-    En complément, je consulte régulièrement des sites spécialisés comme <strong>Hitek.fr</strong> 
-    pour les actualités High Tech et <strong>Hardware.fr</strong> pour les nouveautés en matériel informatique.
-  </p>
-  <br>
-  
-      <div class="veille-tools">
-        <div class="tool">
-          <h4>Flux RSS et agrégateurs de contenus</h4>
-          <p>Des outils comme <strong>Feedly</strong> ou <strong>Inoreader</strong> permettent de suivre en temps réel 
-             les mises à jour des blogs et sites spécialisés.</p>
-        </div>
-  
-        <div class="tool">
-          <h4>Newsletters spécialisées</h4>
-          <p>Je m'abonne à des newsletters comme <strong>TechCrunch</strong> ou <strong>Le Monde Informatique</strong> 
-             pour recevoir des analyses des dernières tendances.</p>
-        </div>
-  
-        <div class="tool">
-          <h4>Réseaux sociaux et communautés en ligne</h4>
-          <p>Des plateformes comme <strong>Twitter</strong>, <strong>LinkedIn</strong> et <strong>Reddit</strong> 
-             me permettent de suivre les experts et les discussions technologiques en temps réel.</p>
-        </div>
+    <footer>
+      <p>&copy; 2024 Fouarge Etienne. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <span>|</span>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <span>|</span>
+        <a href="conditions-generales.html">Conditions générales</a>
       </div>
-
-      <br>
-      
-
-<!-- Applications concrètes et cas d’usage -->
-<h3>Applications concrètes et cas d'usage</h3>
-<p>
-  Des outils comme <strong>ChatGPT</strong>, <strong>DALL·E</strong> et <strong>Midjourney</strong> permettent de générer 
-  des contenus variés (textes, images, musiques). Ces innovations offrent plusieurs avantages :
-</p>
-<ul>
-  <li><strong>Réduction des délais de production</strong> : Création rapide de contenus textuels et visuels.</li>
-  <li><strong>Personnalisation à grande échelle</strong> : Adaptation des contenus aux besoins spécifiques d'un public.</li>
-  <li><strong>Optimisation des ressources</strong> : Réduction des coûts liés à la production de contenus.</li>
-</ul>
-
-<!-- Amélioration des interactions humaines -->
-<h3>Amélioration des interactions humaines</h3>
-<p>
-  Les chatbots et assistants virtuels basés sur l’IA offrent une meilleure expérience utilisateur en proposant des réponses 
-  plus naturelles et adaptées aux besoins des utilisateurs.
-</p>
-
-<!-- Enjeux et défis à relever -->
-<h3>Enjeux et défis à relever</h3>
-<p>
-  Si l’IA générative apporte des avantages, elle soulève également des questions importantes :
-</p>
-<ul>
-  <li><strong>Questions éthiques</strong> : Qui détient la propriété intellectuelle des contenus générés ?</li>
-  <li><strong>Impact sur l'emploi</strong> : Certaines professions risquent d'être impactées par l'automatisation.</li>
-  <li><strong>Fiabilité des modèles</strong> : Les IA doivent être surveillées pour éviter les biais et erreurs.</li>
-</ul>
-
-<!-- Perspectives d’avenir -->
-<h3>Perspectives d'avenir</h3>
-<p>
-  L’IA générative continuera de s’améliorer et d’évoluer, avec des avancées en open-source et une démocratisation 
-  des outils d’intelligence artificielle. De nouveaux métiers émergeront, intégrant expertise humaine et collaboration avec l’IA.
-</p>
-</section>
-
-  
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form id="contact-form" method="POST" aria-label="Formulaire de contact">
-      <div class="form-group">
-        <label for="name" class="sr-only">Votre nom</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required aria-required="true">
-      </div>
-      <div class="form-group">
-        <label for="email" class="sr-only">Votre email</label>
-        <input type="email" id="email" name="email" placeholder="Votre email" required aria-required="true">
-      </div>
-      <div class="form-group">
-        <label for="message" class="sr-only">Votre message</label>
-        <textarea id="message" name="message" placeholder="Votre message" rows="5" required aria-required="true"></textarea>
-      </div>
-      <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
-  </section>
-</main>
-
-  <footer>
-    <p>&copy; 2024 Fouarge Etienne. Tous droits réservés.</p>
-  </footer>
+    </footer>
+  </div>
 
   <!-- Bouton retour en haut -->
   <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de la page" title="Retour en haut">

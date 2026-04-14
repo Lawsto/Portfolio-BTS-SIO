@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mes projets - Portfolio d'Etienne Fouarge">
+  <title>Projets - Portfolio Etienne Fouarge</title>
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" role="navigation" aria-label="Navigation principale">
+    <div class="sidebar-header">
+      <div class="logo" aria-label="Logo du site">Fouarge Etienne</div>
+      <button class="sidebar-toggle" aria-label="Réduire le menu" aria-expanded="true">
+        <span>☰</span>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <ul class="sidebar-menu">
+        <li><a href="index.html">À propos</a></li>
+        <li><a href="parcours.html">Mon Parcours</a></li>
+        <li><a href="experiences.html">Expériences</a></li>
+        <li><a href="projets.html" class="active">Projets</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="documentations.html">Documentations</a></li>
+        <li><a href="veille-technologique.html">Veille Technologique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-wrapper">
+    <main>
+      <section class="page-section">
+        <h2>Mes Projets</h2>
+        <p>Découvrez les projets sur lesquels j'ai travaillé dans le cadre de ma formation BTS SIO.</p>
+
+        <div class="projets-container">
+            <!-- Projet 1 -->
+            <div class="projet-box projet-detailed">
+                <div class="projet-header">
+                    <h3>Projet AP3 : Déploiement d'une infrastructure multisites sécurisée IFIDE SUP'FORMATION</h3>
+                </div>
+                
+                <!-- Contexte du projet -->
+                <div class="projet-section">
+                    <h4 class="section-title">1) Contexte du projet</h4>
+                    <p><strong>Où, quand, dans quel cadre :</strong> Projet réalisé dans le cadre du BTS SIO option SISR, en collaboration avec l'entreprise FDF (équipe de 3 personnes : Etienne FOUARGE, Gil DELORY, Constant FOOS).</p>
+                    <p><strong>Problème / besoin métier initial :</strong> IFIDE SUP'FORMATION, établissement de formation situé à Eckbolsheim en Alsace, souhaitait s'implanter à Mulhouse pour répondre à la demande croissante. Chaque site fonctionnait de manière indépendante, nécessitant une infrastructure unifiée et sécurisée.</p>
+                    <p><strong>Situation professionnelle simulée :</strong> Mission de modernisation de l'infrastructure IT avec un budget maximum de 150 000 € HT, visant à créer un système d'information hautement disponible avec liaison inter-sites chiffrée entre Strasbourg, Mulhouse et Colmar.</p>
+                </div>
+
+                <button class="projet-toggle-btn" aria-expanded="false" aria-controls="projet-ap3-details">
+                    <span class="toggle-icon">▼</span>
+                    <span class="toggle-text">Voir plus de détails</span>
+                </button>
+
+                <div id="projet-ap3-details" class="projet-details-collapsible">
+                <!-- Objectifs du projet - Grille 2x2 -->
+                <div class="projet-section">
+                    <h4 class="section-title">2) Objectifs du projet</h4>
+                    <div class="objectifs-grid">
+                        <div class="objectif-card">
+                            <div class="objectif-icon">⚙️</div>
+                            <h5>Installer et configurer</h5>
+                            <p>Active Directory, DNS, DHCP, DFS/DFSR, tunnels VPN IPsec via pfSense, serveurs NAS avec iSCSI</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">🔒</div>
+                            <h5>Sécuriser</h5>
+                            <p>Infrastructure conforme aux recommandations ANSSI, chiffrement des communications inter-sites, authentification centralisée</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">✅</div>
+                            <h5>Tester</h5>
+                            <p>Validation de la haute disponibilité, tests de réplication DFSR, vérification de la connectivité inter-sites</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">📄</div>
+                            <h5>Documenter</h5>
+                            <p>Procédures d'installation, configuration, sauvegarde, schémas réseau, analyse de risques</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environnement technique -->
+                <div class="projet-section">
+                    <h4 class="section-title">3) Environnement technique</h4>
+                    <p><strong>Matériel / VM :</strong> 6 serveurs Gigabyte R282-294 (AMD EPYC 7282, 96 Go RAM), 3 pare-feu Netgate 8300 pfSense, 3 NAS ASUSTOR Lockerstor 4 Gen 3, postes clients Windows 11 Pro</p>
+                    <p><strong>OS :</strong> Windows Server 2022 (6 licences), pfSense (3 instances)</p>
+                    <p><strong>Services :</strong> Active Directory Domain Services, DNS, DHCP, DFS/DFSR, Windows Server Backup, Shadow Copy, iSCSI Target, VPN IPsec</p>
+                    <p><strong>Réseau :</strong> 3 sites (Strasbourg 192.168.80.0/24, Mulhouse 192.168.160.0/24, Colmar 192.168.240.0/24), tunnels VPN IPsec maillés</p>
+                    <p><strong>Outils utilisés :</strong> PowerShell, Gestionnaire de serveur Windows, pfSense WebGUI, outils de monitoring réseau</p>
+                </div>
+
+                <!-- Procédure / Réalisation - Timeline visuelle -->
+                <div class="projet-section">
+                    <h4 class="section-title">4) Procédure / Réalisation</h4>
+                    <div class="procedure-timeline">
+                        <div class="procedure-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Installation pare-feu pfSense</h5>
+                                <p>Configuration des pare-feu pfSense sur les trois sites (Strasbourg, Mulhouse, Colmar)</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Tunnels VPN IPsec</h5>
+                                <p>Mise en place des tunnels VPN IPsec en maillage complet entre les trois sites</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Contrôleurs de domaine principaux</h5>
+                                <p>Installation et configuration (STG-SRVW01, MUL-SRVW01, COL-SRVW01) avec Active Directory Domain Services</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Services DNS et DHCP</h5>
+                                <p>Configuration des services DNS et DHCP sur les contrôleurs principaux</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h5>Contrôleurs secondaires</h5>
+                                <p>Installation et configuration (STG-SRVW02, MUL-SRVW02, COL-SRVW02) pour la redondance</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h5>Synchronisation horloge et DFS</h5>
+                                <p>Configuration du serveur NTP et installation du rôle DFS</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h5>DFSR</h5>
+                                <p>Mise en place de DFSR pour la réplication des données utilisateurs</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h5>Serveurs NAS iSCSI</h5>
+                                <p>Installation et configuration des serveurs NAS avec cibles iSCSI pour les sauvegardes</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">9</div>
+                            <div class="step-content">
+                                <h5>GPO</h5>
+                                <p>Configuration des Group Policy Objects pour la gestion centralisée</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">10</div>
+                            <div class="step-content">
+                                <h5>Règles pare-feu et tests</h5>
+                                <p>Configuration des règles de pare-feu et tests de sécurité</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preuves - Cartes -->
+                <div class="projet-section">
+                    <h4 class="section-title">5) Preuves (Traces techniques)</h4>
+                    <div class="preuves-grid">
+                        <div class="preuve-card">
+                            <h5>🔐 Configuration Active Directory</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Vérifier la création du domaine ifide.lan</p>
+                                <p><strong>Sécurité :</strong> Authentification centralisée</p>
+                                <p><strong>Preuves :</strong> Captures d'écran AD Users and Computers, logs d'événements Windows</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>🔗 Tunnels VPN IPsec</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Valider la connectivité inter-sites</p>
+                                <p><strong>Sécurité :</strong> Chiffrement IPsec</p>
+                                <p><strong>Preuves :</strong> Captures pfSense, tests de ping inter-sites</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>📁 Réplication DFSR</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Vérifier la synchronisation des données</p>
+                                <p><strong>Sécurité :</strong> Réplication sécurisée</p>
+                                <p><strong>Preuves :</strong> Logs DFSR, captures du Gestionnaire de réplication DFS</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>🌐 Configuration DNS/DHCP</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Assurer la résolution de noms et l'attribution d'adresses IP</p>
+                                <p><strong>Sécurité :</strong> DNS sécurisé</p>
+                                <p><strong>Preuves :</strong> Captures de configuration DNS, logs DHCP</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>💾 Sauvegardes iSCSI</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Valider les sauvegardes complètes et clichés instantanés</p>
+                                <p><strong>Sécurité :</strong> Données chiffrées</p>
+                                <p><strong>Preuves :</strong> Captures des montages iSCSI, logs de sauvegarde Windows Server Backup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesures de sécurité - Grille -->
+                <div class="projet-section">
+                    <h4 class="section-title">6) Mesures de sécurité appliquées</h4>
+                    <div class="securite-grid">
+                        <div class="securite-card">
+                            <div class="securite-icon">👥</div>
+                            <h5>Droits et permissions</h5>
+                            <p>Gestion centralisée via Active Directory, principe du moindre privilège, séparation des rôles administrateurs</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">🛡️</div>
+                            <h5>Pare-feu et VLAN</h5>
+                            <p>Configuration pfSense avec règles de filtrage strictes, isolation des réseaux par plages IP (/24), segmentation réseau</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">💾</div>
+                            <h5>Sauvegardes</h5>
+                            <p>Sauvegardes complètes quotidiennes via Windows Server Backup, clichés instantanés Shadow Copy, réplication inter-sites DFSR</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">🔄</div>
+                            <h5>Mises à jour</h5>
+                            <p>Stratégie de mise à jour Windows Update, maintenance planifiée, suivi des correctifs de sécurité</p>
+                        </div>
+                        <div class="securite-card securite-card-wide">
+                            <div class="securite-icon">⭐</div>
+                            <h5>Bonnes pratiques</h5>
+                            <p>Conformité aux recommandations ANSSI, chiffrement des communications (IPsec), authentification forte (AD), documentation de sécurité</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tests et validation - Blocs -->
+                <div class="projet-section">
+                    <h4 class="section-title">7) Tests et validation</h4>
+                    <div class="tests-container">
+                        <div class="test-card">
+                            <h5>🧪 Tests réalisés</h5>
+                            <p>Tests de connectivité inter-sites via VPN, validation de la résolution DNS, tests de basculement DHCP, vérification de la réplication DFSR, tests de restauration de sauvegardes</p>
+                        </div>
+                        <div class="test-card">
+                            <h5>📊 Logs consultés</h5>
+                            <p>Logs d'événements Windows (Active Directory, DNS, DHCP), logs pfSense (tunnels VPN), logs DFSR (réplication), logs de sauvegarde</p>
+                        </div>
+                        <div class="test-card test-success">
+                            <h5>✅ Résultats obtenus</h5>
+                            <p>Tous les tunnels VPN établis et fonctionnels, résolution DNS opérationnelle sur les trois sites, réplication DFSR active, sauvegardes validées, haute disponibilité confirmée</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difficultés - Carte spéciale -->
+                <div class="projet-section">
+                    <h4 class="section-title">8) Difficultés rencontrées et solutions</h4>
+                    <div class="difficulte-card">
+                        <div class="difficulte-header">
+                            <span class="difficulte-icon">⚠️</span>
+                            <h5>Problème technique majeur</h5>
+                        </div>
+                        <p>Désynchronisation critique du service DFSR due à une mauvaise gestion asynchrone des snapshots sur les trois environnements de virtualisation distincts.</p>
+                        <div class="difficulte-solution">
+                            <h6>💡 Méthode de résolution</h6>
+                            <p>Reconstruction complète du service DFSR et mise en place d'une procédure de snapshot coordonnée pour prévenir de futures occurrences.</p>
+                        </div>
+                        <div class="difficulte-apprentissage">
+                            <h6>📚 Ce qui a été appris</h6>
+                            <p>Importance de la coordination des snapshots en environnement multisites, nécessité de procédures strictes pour la gestion des snapshots, importance de la documentation des incidents pour éviter les récurrences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Améliorations - Grille -->
+                <div class="projet-section">
+                    <h4 class="section-title">9) Améliorations possibles (PDCA – SMSI)</h4>
+                    <div class="ameliorations-grid">
+                        <div class="amelioration-card">
+                            <h5>🤖 Automatisation</h5>
+                            <p>Scripts PowerShell pour l'automatisation des tâches récurrentes, déploiement automatisé via GPO</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>🔐 Sécurisation</h5>
+                            <p>Mise en place d'un système de monitoring avancé (SIEM), renforcement de la politique de mots de passe, audit de sécurité régulier</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>📚 Documentation supplémentaire</h5>
+                            <p>Procédures de reprise après sinistre (PRA), plan de continuité d'activité (PCA), runbooks opérationnels</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>📊 Supervision</h5>
+                            <p>Mise en place d'un système de monitoring centralisé (Nagios, Zabbix), alertes automatiques, tableaux de bord de supervision</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>🔄 PRA / MCO</h5>
+                            <p>Plan de reprise d'activité documenté, procédures de maintenance courante, formation des équipes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences - Tags -->
+                <div class="projet-section">
+                    <h4 class="section-title">10) Compétences BTS SISR mobilisées</h4>
+                    <div class="competences-container">
+                        <div class="competence-tag">⚙️ Installation / configuration</div>
+                        <div class="competence-tag">👨‍💼 Administration</div>
+                        <div class="competence-tag">🌐 Réseaux</div>
+                        <div class="competence-tag">🔒 Sécurité</div>
+                        <div class="competence-tag">📊 Supervision</div>
+                        <div class="competence-tag">📄 Documentation</div>
+                        <div class="competence-tag">⚠️ Analyse de risque</div>
+                    </div>
+                    <div class="competences-details">
+                        <div class="competence-detail-card">
+                            <h5>⚙️ Installation / configuration</h5>
+                            <p>Installation Windows Server 2022, configuration Active Directory, DNS, DHCP, DFS/DFSR</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>👨‍💼 Administration</h5>
+                            <p>Gestion des utilisateurs et groupes AD, configuration des GPO, administration des services Windows</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>🌐 Réseaux</h5>
+                            <p>Configuration des tunnels VPN IPsec, gestion du routage, configuration des pare-feu pfSense</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>🔒 Sécurité</h5>
+                            <p>Mise en conformité ANSSI, configuration des règles de pare-feu, chiffrement des communications</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>📊 Supervision</h5>
+                            <p>Monitoring des services, analyse des logs, gestion des alertes</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>📄 Documentation</h5>
+                            <p>Rédaction de procédures techniques, schémas réseau, documentation utilisateur</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>⚠️ Analyse de risque</h5>
+                            <p>Identification des vulnérabilités, évaluation des risques, proposition de solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation - Colonnes -->
+                <div class="projet-section">
+                    <h4 class="section-title">11) Documentation</h4>
+                    <div class="documentation-grid">
+                        <div class="doc-category">
+                            <h5>📋 A. Documentation technique</h5>
+                            <p class="doc-subtitle">Pour les administrateurs</p>
+                            <ul class="doc-list">
+                                <li>Procédure d'installation Windows Server 2022 et rôles</li>
+                                <li>Procédure de configuration Active Directory, DNS, DHCP</li>
+                                <li>Procédure de sauvegarde / restauration (Windows Server Backup, Shadow Copy)</li>
+                                <li>Fichier de paramétrage (configuration pfSense, règles de pare-feu)</li>
+                                <li>Scripts d'installation PowerShell</li>
+                                <li>Plan d'adressage IP (3 sites avec plages /24)</li>
+                            </ul>
+                        </div>
+                        <div class="doc-category">
+                            <h5>👤 B. Documentation utilisateur</h5>
+                            <ul class="doc-list">
+                                <li>Guide utilisateur simplifié pour la connexion au domaine</li>
+                                <li>Étapes pour accéder aux partages réseau DFS</li>
+                            </ul>
+                        </div>
+                        <div class="doc-category">
+                            <h5>🔐 C. Documentation SMSI</h5>
+                            <ul class="doc-list">
+                                <li>Analyse de risques du projet</li>
+                                <li>Politique de sécurité appliquée (conformité ANSSI)</li>
+                                <li>Bonnes pratiques de sécurité (authentification, chiffrement, sauvegardes)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet-links">
+                    <a href="documents/DocAP3.pdf" class="btn-projet" target="_blank">Documentation complète</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="projet-box projet-detailed">
+                <div class="projet-header">
+                    <h3>Projet ERP : Développement d'un système de gestion intégré Rescuola</h3>
+                </div>
+                
+                <!-- Contexte du projet -->
+                <div class="projet-section">
+                    <h4 class="section-title">1) Contexte du projet</h4>
+                    <p><strong>Où, quand, dans quel cadre :</strong> Projet réalisé dans le cadre du développement d'un ERP complet pour établissement de formation, intégrant la gestion des formations, du consulting IT, des ressources humaines, de la finance et de la conformité réglementaire européenne.</p>
+                    <p><strong>Problème / besoin métier initial :</strong> Les établissements de formation nécessitent un système de gestion intégré pour centraliser toutes leurs activités : gestion des formations modulaires, suivi des intervenants, gestion des contrats clients, suivi financier, gestion des congés, bibliothèque documentaire, et module de consulting IT avec suivi des missions, CRA (Comptes Rendus d'Activité) et timesheets.</p>
+                    <p><strong>Situation professionnelle :</strong> Développement d'un ERP web complet conforme aux normes européennes (RGPD, Directive NIS 2), avec authentification sécurisée, gestion multi-langues (FR, EN, DE, IT, PL), et intégration WordPress pour la synchronisation des formations.</p>
+                </div>
+
+                <button class="projet-toggle-btn" aria-expanded="false" aria-controls="projet-erp-details">
+                    <span class="toggle-icon">▼</span>
+                    <span class="toggle-text">Voir plus de détails</span>
+                </button>
+
+                <div id="projet-erp-details" class="projet-details-collapsible">
+                <!-- Objectifs du projet - Grille 2x2 -->
+                <div class="projet-section">
+                    <h4 class="section-title">2) Objectifs du projet</h4>
+                    <div class="objectifs-grid">
+                        <div class="objectif-card">
+                            <div class="objectif-icon">⚙️</div>
+                            <h5>Développer</h5>
+                            <p>Système de gestion des formations modulaires avec planification calendaire, module de consulting IT avec gestion des missions (Régie/Forfait), CRA, timesheets, gestion financière complète, gestion des ressources humaines, bibliothèque documentaire, module clients et contrats de formation.</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">🔒</div>
+                            <h5>Sécuriser</h5>
+                            <p>Conformité RGPD et Directive NIS 2, authentification sécurisée avec protection CSRF/XSS, gestion des rôles et permissions granulaires, chiffrement bcrypt, headers de sécurité HTTP, journalisation des événements d'authentification.</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">✅</div>
+                            <h5>Tester</h5>
+                            <p>Validation des fonctionnalités multi-modules, tests de sécurité (injection SQL, XSS, CSRF), tests de conformité RGPD, validation de la synchronisation WordPress.</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">📄</div>
+                            <h5>Documenter</h5>
+                            <p>Documentation technique complète, guide d'utilisation sécurisée, registre des traitements RGPD, procédures de gestion d'incidents, documentation de conformité européenne.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environnement technique -->
+                <div class="projet-section">
+                    <h4 class="section-title">3) Environnement technique</h4>
+                    <div class="env-technique-grid">
+                        <div class="env-card">
+                            <h5>Langages / Frameworks</h5>
+                            <p>PHP 7.4+, MySQL/MariaDB, JavaScript (ES6+), HTML5, CSS3</p>
+                        </div>
+                        <div class="env-card">
+                            <h5>Serveur Web</h5>
+                            <p>Apache avec configuration HTTPS/TLS, support des reverse proxies</p>
+                        </div>
+                        <div class="env-card">
+                            <h5>Base de données</h5>
+                            <p>MySQL avec multiples bases de données (rescuola, humanressources, crm_tasks, gestion_financiere, evaluation)</p>
+                        </div>
+                        <div class="env-card">
+                            <h5>Bibliothèques PHP</h5>
+                            <p>dompdf/dompdf, phpmailer/phpmailer, phpoffice/phpspreadsheet, mpdf/mpdf, vlucas/phpdotenv</p>
+                        </div>
+                        <div class="env-card">
+                            <h5>Outils JavaScript</h5>
+                            <p>Frappe Gantt (diagrammes de Gantt), bibliothèques de visualisation de calendrier</p>
+                        </div>
+                        <div class="env-card">
+                            <h5>Intégrations</h5>
+                            <p>WordPress (API REST), DeepL API (traduction), système multi-langues (FR, EN, DE, IT, PL)</p>
+                        </div>
+                        <div class="env-card">
+                            <h5>Outils de développement</h5>
+                            <p>Git pour le versioning, structure modulaire PHP orientée objet, architecture MVC simplifiée</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procédure / Réalisation - Timeline visuelle -->
+                <div class="projet-section">
+                    <h4 class="section-title">4) Procédure / Réalisation</h4>
+                    <div class="procedure-timeline">
+                        <div class="procedure-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Architecture de base de données</h5>
+                                <p>Conception et implémentation d'une architecture multi-bases de données avec relations normalisées, contraintes d'intégrité référentielle, et vues consolidées pour les requêtes complexes</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Système d'authentification sécurisé</h5>
+                                <p>Développement d'un système d'authentification avec protection CSRF, limitation des tentatives de connexion, verrouillage de compte après échecs répétés, et journalisation des événements d'authentification (conformité RGPD Article 30)</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Gestion des rôles et permissions</h5>
+                                <p>Implémentation d'un système de rôles granulaires avec permissions modulaires, gestion hiérarchique des droits d'accès, et contrôle d'accès basé sur les rôles (RBAC)</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Module de gestion des formations</h5>
+                                <p>Développement d'un système complet de gestion des formations modulaires avec planification calendaire, gestion des intervenants, suivi des conflits de calendrier, et synchronisation avec WordPress</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h5>Module de consulting IT</h5>
+                                <p>Création d'un module dédié au consulting IT avec gestion des missions (Régie/Forfait), système de CRA (Comptes Rendus d'Activité) avec workflow de validation, timesheets, gestion des compétences et matching automatique, suivi du matériel affecté</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h5>Gestion financière</h5>
+                                <p>Développement d'un module financier complet avec gestion des budgets, charges, gains, paiements, courriers, et tableaux de bord de rentabilité</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h5>Gestion des ressources humaines</h5>
+                                <p>Implémentation de la gestion des congés avec calcul automatique des soldes, validation hiérarchique, gestion des entretiens professionnels et annuels, et suivi des compétences</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h5>Bibliothèque documentaire</h5>
+                                <p>Création d'un système de gestion documentaire avec arborescence de dossiers, gestion des permissions par fichier, visualisation PDF intégrée, et gestion des versions</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">9</div>
+                            <div class="step-content">
+                                <h5>Système multi-langues</h5>
+                                <p>Développement d'un système de traduction avec support de 5 langues (FR, EN, DE, IT, PL), sélection dynamique de la langue, sauvegarde de préférence utilisateur, et intégration DeepL pour traduction automatique</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">10</div>
+                            <div class="step-content">
+                                <h5>Conformité réglementaire</h5>
+                                <p>Mise en conformité RGPD avec registre des traitements, procédures de gestion d'incidents, documentation de sécurité, headers HTTP sécurisés, et guide d'utilisation sécurisée</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">11</div>
+                            <div class="step-content">
+                                <h5>Intégration WordPress</h5>
+                                <p>Développement d'une synchronisation bidirectionnelle avec WordPress pour la publication automatique des formations, gestion des inscriptions, et intégration des shortcodes Elementor</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">12</div>
+                            <div class="step-content">
+                                <h5>Interface utilisateur</h5>
+                                <p>Création d'une interface moderne et responsive avec sidebar globale, navigation intuitive, tableaux de bord personnalisables, et expérience utilisateur optimisée</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preuves - Cartes -->
+                <div class="projet-section">
+                    <h4 class="section-title">5) Preuves (Traces techniques)</h4>
+                    <div class="preuves-grid">
+                        <div class="preuve-card">
+                            <h5>🔐 Système d'authentification sécurisé</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Vérifier la sécurité de l'authentification</p>
+                                <p><strong>Sécurité :</strong> Protection CSRF, limitation des tentatives, chiffrement bcrypt</p>
+                                <p><strong>Preuves :</strong> Code source `index.php`, `security_helper.php`, logs d'authentification, configuration des sessions sécurisées</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>🔗 Gestion des rôles et permissions</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Valider le contrôle d'accès granulaire</p>
+                                <p><strong>Sécurité :</strong> RBAC avec permissions modulaires</p>
+                                <p><strong>Preuves :</strong> Code source `modules/admin/role_helper.php`, `RoleManager.php`, interface de gestion des rôles</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>📁 Architecture modulaire</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Vérifier l'organisation du code</p>
+                                <p><strong>Sécurité :</strong> Séparation des responsabilités, validation des inputs</p>
+                                <p><strong>Preuves :</strong> Structure des dossiers `modules/`, classes Manager (CongesManager, HierarchieManager, RoleManager)</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>🌐 Conformité RGPD</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Assurer la conformité réglementaire</p>
+                                <p><strong>Sécurité :</strong> Registre des traitements, procédures d'incidents, documentation</p>
+                                <p><strong>Preuves :</strong> Fichiers `REGISTRE_TRAITEMENTS_RGPD.md`, `PROCEDURE_INCIDENT_RGPD.md`, `GUIDE_UTILISATION_SECURISEE.md`</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>💾 Gestion des données</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Valider l'intégrité et la sécurité des données</p>
+                                <p><strong>Sécurité :</strong> Requêtes préparées, validation stricte, échappement XSS</p>
+                                <p><strong>Preuves :</strong> Code source `db.php`, fonctions de sécurité dans `security_helper.php`, utilisation de PDO avec requêtes préparées</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>📊 Module de consulting IT</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Vérifier la gestion complète des missions consulting</p>
+                                <p><strong>Sécurité :</strong> Workflow de validation, contrôle des accès</p>
+                                <p><strong>Preuves :</strong> Structure SQL `consulting_it_structure.sql`, interfaces de gestion CRA, timesheets, compétences</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>🔄 Synchronisation WordPress</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Valider l'intégration avec WordPress</p>
+                                <p><strong>Sécurité :</strong> Authentification API sécurisée</p>
+                                <p><strong>Preuves :</strong> Scripts de synchronisation `sync_formations_to_wordpress.php`, documentation `GUIDE-ELEMENTOR-SHORTCODES.md`</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesures de sécurité - Grille -->
+                <div class="projet-section">
+                    <h4 class="section-title">6) Mesures de sécurité appliquées</h4>
+                    <div class="securite-grid">
+                        <div class="securite-card">
+                            <div class="securite-icon">👥</div>
+                            <h5>Droits et permissions</h5>
+                            <p>Système de rôles granulaires avec permissions modulaires, principe du moindre privilège appliqué, gestion hiérarchique des droits d'accès, contrôle d'accès basé sur les rôles (RBAC).</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">🛡️</div>
+                            <h5>Protection contre les vulnérabilités web</h5>
+                            <p>Protection CSRF avec tokens aléatoires, protection XSS avec échappement systématique, protection contre l'injection SQL avec requêtes préparées PDO, validation stricte des inputs, sanitization des données utilisateur.</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">💾</div>
+                            <h5>Gestion des mots de passe</h5>
+                            <p>Chiffrement bcrypt avec coût adaptatif, politique de mots de passe, limitation des tentatives de connexion (5 tentatives max), verrouillage automatique des comptes après échecs répétés, journalisation des tentatives d'authentification.</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">🔄</div>
+                            <h5>Sessions sécurisées</h5>
+                            <p>Cookies HTTPOnly et Secure, mode strict des sessions (prévention fixation d'ID), régénération des tokens CSRF après connexion, timeout automatique des sessions (15 minutes d'inactivité).</p>
+                        </div>
+                        <div class="securite-card securite-card-wide">
+                            <div class="securite-icon">⭐</div>
+                            <h5>Conformité réglementaire</h5>
+                            <p>Conformité RGPD (registre des traitements, procédures d'incidents), conformité Directive NIS 2, headers de sécurité HTTP (X-Frame-Options, X-Content-Type-Options, etc.), journalisation des événements critiques (Article 30 RGPD), documentation complète de sécurité.</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">🔐</div>
+                            <h5>Chiffrement et HTTPS</h5>
+                            <p>Configuration TLS/SSL pour toutes les communications, support des reverse proxies avec détection HTTPS améliorée, configuration Apache sécurisée (HSTS recommandé).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tests et validation - Blocs -->
+                <div class="projet-section">
+                    <h4 class="section-title">7) Tests et validation</h4>
+                    <div class="tests-container">
+                        <div class="test-card">
+                            <h5>🧪 Tests réalisés</h5>
+                            <p>Tests d'authentification (connexion, déconnexion, verrouillage de compte), tests de sécurité (CSRF, XSS, injection SQL), tests de validation des inputs, tests de gestion des rôles et permissions, tests de synchronisation WordPress, tests de conformité RGPD, tests de fonctionnalités multi-modules (formations, consulting, finance, RH).</p>
+                        </div>
+                        <div class="test-card">
+                            <h5>📊 Logs consultés</h5>
+                            <p>Logs d'authentification (tentatives réussies/échouées), logs d'événements système (erreurs PHP, exceptions), logs de synchronisation WordPress, logs de traduction DeepL.</p>
+                        </div>
+                        <div class="test-card test-success">
+                            <h5>✅ Résultats obtenus</h5>
+                            <p>Authentification sécurisée fonctionnelle avec protection CSRF, système de rôles opérationnel avec contrôle d'accès granulaire, modules fonctionnels (formations, consulting, finance, RH, bibliothèque), conformité RGPD documentée et implémentée, synchronisation WordPress opérationnelle, interface multi-langues fonctionnelle (5 langues supportées), protection contre les vulnérabilités web validée.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difficultés - Carte spéciale -->
+                <div class="projet-section">
+                    <h4 class="section-title">8) Difficultés rencontrées et solutions</h4>
+                    <div class="difficulte-card">
+                        <div class="difficulte-header">
+                            <span class="difficulte-icon">⚠️</span>
+                            <h5>Problème technique majeur</h5>
+                        </div>
+                        <p>Gestion complexe de la synchronisation des formations avec WordPress, notamment pour la gestion des formations modulaires avec récurrences complexes et la synchronisation des inscriptions en temps réel.</p>
+                        <div class="difficulte-solution">
+                            <h6>💡 Méthode de résolution</h6>
+                            <p>Développement d'un système de synchronisation incrémentale avec gestion des conflits, création d'une API REST sécurisée pour WordPress, implémentation d'un système de cache pour optimiser les performances, développement de scripts de synchronisation avec gestion des erreurs et retry automatique, documentation complète des procédures de synchronisation</p>
+                        </div>
+                        <div class="difficulte-apprentissage">
+                            <h6>📚 Ce qui a été appris</h6>
+                            <p>Importance de la gestion des erreurs et des cas limites dans les intégrations externes, nécessité d'une architecture modulaire pour faciliter la maintenance, importance de la documentation de sécurité pour la conformité réglementaire, complexité de la gestion multi-langues avec traduction automatique, bonnes pratiques de sécurité web (CSRF, XSS, injection SQL)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Améliorations - Grille -->
+                <div class="projet-section">
+                    <h4 class="section-title">9) Améliorations possibles (PDCA – SMSI)</h4>
+                    <div class="ameliorations-grid">
+                        <div class="amelioration-card">
+                            <h5>🤖 Automatisation</h5>
+                            <p>Scripts PowerShell/Python pour automatisation des sauvegardes, automatisation des tests de sécurité (OWASP ZAP, SonarQube), automatisation des mises à jour de sécurité, déploiement automatisé avec CI/CD (GitHub Actions, GitLab CI).</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>🔐 Sécurisation avancée</h5>
+                            <p>Implémentation de l'authentification à deux facteurs (2FA), système de monitoring avancé (SIEM), audit de sécurité régulier avec outils automatisés, renforcement de la politique de mots de passe, chiffrement au repos des données sensibles.</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>📚 Documentation supplémentaire</h5>
+                            <p>Procédures de reprise après sinistre (PRA) détaillées, plan de continuité d'activité (PCA) complet, runbooks opérationnels pour chaque module, documentation API complète, guide de développement pour les contributeurs.</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>📊 Supervision et monitoring</h5>
+                            <p>Monitoring centralisé (Nagios, Zabbix, Prometheus), alertes automatiques pour les incidents de sécurité, tableaux de bord de supervision en temps réel, monitoring des performances (APM), logs centralisés avec ELK Stack.</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>🔄 PRA / MCO</h5>
+                            <p>Plan de reprise d'activité documenté et testé régulièrement, procédures de maintenance courante (MCO) standardisées, formation des équipes sur les procédures d'urgence, tests de restauration réguliers, documentation des procédures de rollback.</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>🌐 Évolutions fonctionnelles</h5>
+                            <p>Module de reporting avancé avec export personnalisé, intégration avec d'autres systèmes (CRM externe, outils de paie), application mobile pour la consultation et la saisie de CRA, tableaux de bord analytiques avec Power BI, système de notifications push en temps réel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences - Tags -->
+                <div class="projet-section">
+                    <h4 class="section-title">10) Compétences mobilisées</h4>
+                    <div class="competences-container">
+                        <div class="competence-tag">⚙️ Développement web</div>
+                        <div class="competence-tag">👨‍💼 Gestion de projet</div>
+                        <div class="competence-tag">🌐 Sécurité web</div>
+                        <div class="competence-tag">📊 Base de données</div>
+                        <div class="competence-tag">📄 Documentation</div>
+                        <div class="competence-tag">⚠️ Analyse de risque</div>
+                        <div class="competence-tag">🔄 Intégration</div>
+                    </div>
+                    <div class="competences-details">
+                        <div class="competence-detail-card">
+                            <h5>⚙️ Développement web</h5>
+                            <p>PHP orienté objet avec architecture modulaire, MySQL/MariaDB avec optimisation des requêtes, JavaScript ES6+ avec manipulation du DOM, HTML5/CSS3 avec design responsive, intégration d'APIs externes (WordPress, DeepL)</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>👨‍💼 Gestion de projet</h5>
+                            <p>Analyse des besoins métier, conception de l'architecture technique, planification et suivi du développement, gestion des priorités et des évolutions</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>🌐 Sécurité web</h5>
+                            <p>Protection contre les vulnérabilités courantes (OWASP Top 10), implémentation de mécanismes de sécurité (CSRF, XSS, SQL Injection), conformité réglementaire (RGPD, NIS 2), audit de sécurité et bonnes pratiques</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>📊 Base de données</h5>
+                            <p>Modélisation de bases de données relationnelles, optimisation des requêtes SQL, gestion des transactions et de l'intégrité référentielle, création de vues et procédures stockées</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>📄 Documentation</h5>
+                            <p>Rédaction de documentation technique, documentation de conformité réglementaire, guides utilisateur, procédures opérationnelles</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>⚠️ Analyse de risque</h5>
+                            <p>Identification des risques de sécurité, évaluation des risques RGPD, proposition de mesures de mitigation, documentation des risques et traitements</p>
+                        </div>
+                        <div class="competence-detail-card">
+                            <h5>🔄 Intégration</h5>
+                            <p>Intégration avec WordPress via API REST, synchronisation de données entre systèmes, gestion des erreurs et des cas limites, optimisation des performances</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation - Colonnes -->
+                <div class="projet-section">
+                    <h4 class="section-title">11) Documentation</h4>
+                    <div class="documentation-grid">
+                        <div class="doc-category">
+                            <h5>📋 A. Documentation technique</h5>
+                            <p class="doc-subtitle">Pour les développeurs et administrateurs système</p>
+                            <ul class="doc-list">
+                                <li>Architecture technique : Structure modulaire, organisation du code, flux de données</li>
+                                <li>Configuration : Fichiers de configuration (`config.php`, `db.php`), variables d'environnement (`.env`)</li>
+                                <li>Base de données : Schémas SQL (`rescuola.sql`, `consulting_it_structure.sql`), documentation des tables et relations</li>
+                                <li>Sécurité : Code source des helpers de sécurité (`security_helper.php`), configuration Apache recommandée</li>
+                                <li>API et intégrations : Documentation de l'API WordPress, procédures de synchronisation</li>
+                                <li>Déploiement : Procédures d'installation, configuration serveur, gestion des dépendances (Composer)</li>
+                            </ul>
+                        </div>
+                        <div class="doc-category">
+                            <h5>👤 B. Documentation utilisateur</h5>
+                            <p class="doc-subtitle">Pour les utilisateurs finaux</p>
+                            <ul class="doc-list">
+                                <li>Guide d'utilisation sécurisée : `GUIDE_UTILISATION_SECURISEE.md` - Bonnes pratiques de sécurité, gestion des mots de passe, protection contre les menaces</li>
+                                <li>Guide des formations modulaires : `GUIDE-FORMATION-TEMPLATE.md` - Utilisation du module de formations</li>
+                                <li>Guide Elementor : `GUIDE-ELEMENTOR-SHORTCODES.md` - Intégration avec WordPress</li>
+                                <li>Documentation des modules : Guides spécifiques pour chaque module (formations, consulting, finance, RH, bibliothèque)</li>
+                            </ul>
+                        </div>
+                        <div class="doc-category">
+                            <h5>🔐 C. Documentation SMSI</h5>
+                            <p class="doc-subtitle">Pour la conformité et la sécurité</p>
+                            <ul class="doc-list">
+                                <li>Conformité européenne : `README_CONFORMITE_EUROPEENNE.md` - Vue d'ensemble de la conformité</li>
+                                <li>Normes européennes : `NORMES_EUROPEENNES_CONFORMITE_ERP.md` - Liste complète des normes applicables</li>
+                                <li>Registre des traitements RGPD : `REGISTRE_TRAITEMENTS_RGPD.md` - Template du registre Article 30 RGPD</li>
+                                <li>Procédure d'incidents : `PROCEDURE_INCIDENT_RGPD.md` - Procédure de gestion des incidents de sécurité (Article 33 RGPD)</li>
+                                <li>Checklist de conformité : Checklist pour chaque installation client</li>
+                                <li>Analyse de risques : Documentation des risques identifiés et mesures de mitigation</li>
+                            </ul>
+                        </div>
+                        <div class="doc-category">
+                            <h5>📊 D. Documentation fonctionnelle</h5>
+                            <p class="doc-subtitle">Pour la compréhension métier</p>
+                            <ul class="doc-list">
+                                <li>Module consulting IT : `RECOMMANDATIONS_CONSULTING_IT.md` - Spécifications du module consulting</li>
+                                <li>Synchronisation formations : `README_FORMATIONS_MODULAIRES_SYNC.md` - Procédures de synchronisation</li>
+                                <li>Audits de sécurité : `AUDIT_SECURITE_MODULE_FORMATIONS.md`, `AUDIT_SECURITE_MODULE_LIBRARY.md` - Audits par module</li>
+                                <li>Optimisations traduction : `OPTIMISATIONS_TRADUCTION_DEEPL.md` - Guide d'optimisation DeepL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet-links">
+                    <a href="documents/[documentation].pdf" class="btn-projet" target="_blank">Documentation complète</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="projet-box">
+                <h3>Projet création site web Rescuola</h3>
+                <p class="projet-description">
+                    Création site vitrine pour vendre les formations.
+                </p>
+                <div class="projet-links">
+                    <a href="documents/[documentation].pdf" class="btn-projet" target="_blank">Documentation</a>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Fouarge Etienne. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <span>|</span>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <span>|</span>
+        <a href="conditions-generales.html">Conditions générales</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bouton retour en haut -->
+  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de la page" title="Retour en haut">
+    ↑
+  </button>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
+
