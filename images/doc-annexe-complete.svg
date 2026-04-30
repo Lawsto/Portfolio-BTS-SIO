@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Annexe complete</title>
+  <desc id="desc">Illustration d'un document annexe avec checklist.</desc>
+  <rect width="160" height="160" rx="28" fill="#eef5ff"/>
+  <rect x="34" y="24" width="92" height="112" rx="14" fill="#ffffff" stroke="#1e73e8" stroke-width="4"/>
+  <rect x="34" y="24" width="92" height="22" rx="14" fill="#1e73e8"/>
+  <rect x="46" y="58" width="14" height="14" rx="4" fill="#4caf50"/>
+  <path d="M50 65l4 4 8-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="68" y="60" width="42" height="8" rx="4" fill="#9bbcf6"/>
+  <rect x="46" y="82" width="14" height="14" rx="4" fill="#4caf50"/>
+  <path d="M50 89l4 4 8-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="68" y="84" width="34" height="8" rx="4" fill="#9bbcf6"/>
+  <rect x="46" y="106" width="14" height="14" rx="4" fill="#4caf50"/>
+  <path d="M50 113l4 4 8-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="68" y="108" width="38" height="8" rx="4" fill="#9bbcf6"/>
+</svg>

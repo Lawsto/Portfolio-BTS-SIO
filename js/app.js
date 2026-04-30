@@ -261,11 +261,39 @@ function hideMessage(element) {
 }
 
 function simulateFormSubmission(data) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log('Données du formulaire:', data);
-      resolve();
-    }, 1500);
+  const payload = {
+    name: data.name,
+    email: data.email,
+    message: data.message,
+    website: (document.getElementById('website')?.value || '').trim()
+  };
+
+  return fetch('api/contact.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  }).then(async (res) => {
+    const text = await res.text();
+    let json = null;
+    try {
+      json = JSON.parse(text);
+    } catch {
+      // ignore
+    }
+
+    if (!res.ok) {
+      const errMsg = (json && json.error) ? json.error : 'Erreur serveur';
+      throw new Error(errMsg);
+    }
+
+    if (!json || json.ok !== true) {
+      const errMsg = (json && json.error) ? json.error : 'Réponse invalide';
+      throw new Error(errMsg);
+    }
+
+    return;
   });
 }
 

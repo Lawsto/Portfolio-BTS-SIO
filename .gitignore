@@ -16,3 +16,7 @@ desktop.ini
 *~
 .tmp/
 
+# Données générées localement (XAMPP / API contact)
+data/
+*.ndjson
+

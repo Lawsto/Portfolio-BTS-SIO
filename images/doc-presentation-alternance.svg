@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Presentation alternance</title>
+  <desc id="desc">Illustration d'une presentation professionnelle.</desc>
+  <rect width="160" height="160" rx="28" fill="#eef7f7"/>
+  <rect x="28" y="28" width="104" height="68" rx="12" fill="#ffffff" stroke="#1e73e8" stroke-width="4"/>
+  <rect x="42" y="42" width="44" height="8" rx="4" fill="#1e73e8"/>
+  <rect x="42" y="58" width="62" height="8" rx="4" fill="#7db6ff"/>
+  <rect x="42" y="74" width="52" height="8" rx="4" fill="#b7d4ff"/>
+  <rect x="74" y="96" width="12" height="20" rx="6" fill="#335c99"/>
+  <rect x="60" y="116" width="40" height="8" rx="4" fill="#335c99"/>
+  <circle cx="52" cy="118" r="14" fill="#0a66c2"/>
+  <circle cx="52" cy="109" r="5" fill="#ffffff"/>
+  <path d="M42 128c2-6 6-9 10-9s8 3 10 9" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M112 120l10-10 8 8" fill="none" stroke="#14a3a3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M130 118v-16h-16" fill="none" stroke="#14a3a3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Fiches descriptives</title>
+  <desc id="desc">Illustration de plusieurs fiches descriptives.</desc>
+  <rect width="160" height="160" rx="28" fill="#f5f0ff"/>
+  <rect x="42" y="34" width="70" height="88" rx="12" fill="#d9c8ff"/>
+  <rect x="34" y="42" width="70" height="88" rx="12" fill="#b99cff"/>
+  <rect x="48" y="28" width="78" height="96" rx="14" fill="#ffffff" stroke="#7a4de8" stroke-width="4"/>
+  <rect x="60" y="44" width="38" height="8" rx="4" fill="#7a4de8"/>
+  <rect x="60" y="60" width="46" height="8" rx="4" fill="#c2adff"/>
+  <rect x="60" y="76" width="38" height="8" rx="4" fill="#c2adff"/>
+  <rect x="60" y="92" width="42" height="8" rx="4" fill="#c2adff"/>
+  <circle cx="118" cy="112" r="16" fill="#1e73e8"/>
+  <path d="M110 112h16M118 104v16" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>

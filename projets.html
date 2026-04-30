@@ -857,13 +857,264 @@
             </div>
 
             <!-- Projet 3 -->
-            <div class="projet-box">
-                <h3>Projet création site web Rescuola</h3>
-                <p class="projet-description">
-                    Création site vitrine pour vendre les formations.
-                </p>
+            <div class="projet-box projet-detailed">
+                <div class="projet-header">
+                    <h3>Projet AP4 : Sécurité civile — Résilience du COD et accès distant sécurisé</h3>
+                </div>
+
+                <!-- Contexte du projet -->
+                <div class="projet-section">
+                    <h4 class="section-title">1) Contexte du projet</h4>
+                    <p><strong>Cadre :</strong> Projet AP4 (sécurité civile) centré sur l’amélioration de la résilience informatique d’un Centre Opérationnel Départemental (COD) et la mise en œuvre d’un accès distant sécurisé pour les agents de terrain.</p>
+                    <p><strong>Besoin métier :</strong> Garantir un fonctionnement nominal en situation de crise (perte d’Internet/téléphonie, saturation réseau mobile), tout en permettant l’accès aux ressources et outils métiers à distance.</p>
+                    <p><strong>Attendus :</strong> Proposition technique et commerciale + maquettage sous environnement virtuel (écarts documentés si contraintes), recettage et démonstration.</p>
+                </div>
+
+                <button class="projet-toggle-btn" aria-expanded="false" aria-controls="projet-ap4-details">
+                    <span class="toggle-icon">▼</span>
+                    <span class="toggle-text">Voir plus de détails</span>
+                </button>
+
+                <div id="projet-ap4-details" class="projet-details-collapsible">
+                <!-- Objectifs du projet - Grille 2x2 -->
+                <div class="projet-section">
+                    <h4 class="section-title">2) Objectifs du projet</h4>
+                    <div class="objectifs-grid">
+                        <div class="objectif-card">
+                            <div class="objectif-icon">🧩</div>
+                            <h5>Concevoir</h5>
+                            <p>Conception d’une solution d’infrastructure résiliente, structurée et documentée (LAN/DMZ, flux, procédures, supervision).</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">🌐</div>
+                            <h5>Assurer la continuité</h5>
+                            <p>Redonder l’accès Internet et les routeurs (haute disponibilité) pour maintenir les services critiques du COD en toutes circonstances.</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">🔐</div>
+                            <h5>Sécuriser l’accès distant</h5>
+                            <p>Mettre en place un VPN “Road Warrior” (OpenVPN) pour accéder aux services (messagerie, téléphonie IP, eBrigade) de manière sécurisée.</p>
+                        </div>
+                        <div class="objectif-card">
+                            <div class="objectif-icon">📡</div>
+                            <h5>Superviser & alerter</h5>
+                            <p>Déployer un outil de supervision/monitoring avec historique des indisponibilités et alertes e-mail en cas de panne des routeurs/serveurs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environnement technique -->
+                <div class="projet-section">
+                    <h4 class="section-title">3) Environnement technique</h4>
+                    <p><strong>Postes :</strong> Windows 10 Pro x64</p>
+                    <p><strong>Annuaire :</strong> Active Directory (2 contrôleurs : principal + secondaire)</p>
+                    <p><strong>Zones :</strong> LAN + DMZ (accès eBrigade en LAN et mode dégradé via DMZ)</p>
+                    <p><strong>Services attendus :</strong> Messagerie (LAN/VPN RW), VoIP/softphone (LAN/VPN RW), eBrigade (LAN + DMZ), supervision & alerting</p>
+                    <p><strong>Accès distant :</strong> OpenVPN Road Warrior</p>
+                    <p><strong>Charge :</strong> cible de 10 utilisateurs simultanés</p>
+                </div>
+
+                <!-- Procédure / Réalisation - Timeline visuelle -->
+                <div class="projet-section">
+                    <h4 class="section-title">4) Procédure / Réalisation</h4>
+                    <div class="procedure-timeline">
+                        <div class="procedure-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h5>Analyse des besoins & contraintes</h5>
+                                <p>Étude des REX (pannes Internet/téléphonie), définition des objectifs (continuité, accès distant, sécurité, supervision) et des contraintes de coût.</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h5>Conception réseau (LAN / DMZ / flux)</h5>
+                                <p>Définition des zones, des flux nécessaires (pare-feu), et des principes de sécurité (modèle “tout interdit sauf autorisé”).</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h5>Haute disponibilité & redondance WAN</h5>
+                                <p>Mise en œuvre de la redondance routeurs / liens WAN (simulation / maquettage), et validation de la bascule.</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h5>Services internes</h5>
+                                <p>Déploiement AD (principal/secondaire), intégration des services (messagerie, VoIP) avec restriction d’accès (LAN/VPN RW).</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h5>Accès distant OpenVPN Road Warrior</h5>
+                                <p>Configuration VPN RW et tests d’accès aux services (messagerie, softphone, eBrigade), y compris accès dégradé via DMZ.</p>
+                            </div>
+                        </div>
+                        <div class="procedure-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h5>Supervision & alertes</h5>
+                                <p>Supervision des routeurs/serveurs, monitoring et historique des indisponibilités, alertes e-mail immédiates en cas de dysfonctionnement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preuves - Cartes -->
+                <div class="projet-section">
+                    <h4 class="section-title">5) Preuves (Traces techniques)</h4>
+                    <div class="preuves-grid">
+                        <div class="preuve-card">
+                            <h5>🔁 Continuité d’accès Internet</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Valider la bascule et la résilience WAN</p>
+                                <p><strong>Preuves :</strong> scénarios de bascule + tests de connectivité, recettage en maquette</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>👥 Active Directory (2 DC)</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Authentification AD préalable pour l’accès aux ressources</p>
+                                <p><strong>Preuves :</strong> comptes AD, jonction domaine, accès conditionné selon règles pare-feu</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>🔐 VPN OpenVPN Road Warrior</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Accès sécurisé aux services internes depuis le terrain</p>
+                                <p><strong>Preuves :</strong> tests d’accès (mail, softphone, eBrigade), contrôle des routes/ACL</p>
+                            </div>
+                        </div>
+                        <div class="preuve-card">
+                            <h5>📈 Supervision & alerting</h5>
+                            <div class="preuve-details">
+                                <p><strong>Objectif :</strong> Détection rapide des pannes et suivi des indisponibilités</p>
+                                <p><strong>Preuves :</strong> tableau de bord monitoring + notifications e-mail</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesures de sécurité - Grille -->
+                <div class="projet-section">
+                    <h4 class="section-title">6) Mesures de sécurité appliquées</h4>
+                    <div class="securite-grid">
+                        <div class="securite-card">
+                            <div class="securite-icon">🧱</div>
+                            <h5>Cloisonnement</h5>
+                            <p>Segmentation LAN/DMZ, principe du moindre privilège sur les flux, exposition minimale des services en DMZ.</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">🛡️</div>
+                            <h5>Politique pare-feu</h5>
+                            <p>Politique de filtrage “sécurité positive” (tout est interdit sauf flux explicitement autorisés et documentés).</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">🔑</div>
+                            <h5>Authentification</h5>
+                            <p>Authentification AD préalable pour l’accès aux ressources et outils (selon règles définies).</p>
+                        </div>
+                        <div class="securite-card">
+                            <div class="securite-icon">📬</div>
+                            <h5>Alerte & supervision</h5>
+                            <p>Alertes e-mail immédiates en cas d’indisponibilité, suivi historique des incidents, monitoring des services critiques.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tests et validation - Blocs -->
+                <div class="projet-section">
+                    <h4 class="section-title">7) Tests et validation</h4>
+                    <div class="tests-container">
+                        <div class="test-card">
+                            <h5>🧪 Tests réalisés</h5>
+                            <p>Tests de bascule WAN, tests d’authentification AD, tests VPN RW (accès mail/VoIP/eBrigade), tests d’accès en DMZ (mode dégradé), tests d’alerte supervision.</p>
+                        </div>
+                        <div class="test-card test-success">
+                            <h5>✅ Recettage</h5>
+                            <p>Validation du fonctionnement des services en LAN et via VPN RW, et vérification de la supervision des composants critiques.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difficultés - Carte spéciale -->
+                <div class="projet-section">
+                    <h4 class="section-title">8) Difficultés rencontrées et solutions</h4>
+                    <div class="difficulte-card">
+                        <div class="difficulte-header">
+                            <span class="difficulte-icon">⚠️</span>
+                            <h5>Contraintes de maquettage</h5>
+                        </div>
+                        <p>Le maquettage en environnement virtuel peut limiter la simulation complète de certaines contraintes physiques (multi-liens WAN, équipements). Les écarts doivent être explicités et documentés.</p>
+                        <div class="difficulte-solution">
+                            <h6>💡 Approche</h6>
+                            <p>Scénarios de tests reproductibles, documentation des hypothèses, et justification des choix techniques / flux.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Améliorations - Grille -->
+                <div class="projet-section">
+                    <h4 class="section-title">9) Améliorations possibles (PDCA – SMSI)</h4>
+                    <div class="ameliorations-grid">
+                        <div class="amelioration-card">
+                            <h5>📊 Observabilité</h5>
+                            <p>Centralisation des logs (syslog/ELK), indicateurs QoS, et corrélation d’événements pour les périodes de crise.</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>🔐 Durcissement</h5>
+                            <p>Durcissement des hôtes (CIS), MFA pour accès distants, revue périodique des règles de filtrage.</p>
+                        </div>
+                        <div class="amelioration-card">
+                            <h5>🧪 Tests</h5>
+                            <p>Plan de tests de continuité (exercices) et tests réguliers de bascule / reprise, avec comptes-rendus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences - Tags -->
+                <div class="projet-section">
+                    <h4 class="section-title">10) Compétences BTS SISR mobilisées</h4>
+                    <div class="competences-container">
+                        <div class="competence-tag">🌐 Réseaux</div>
+                        <div class="competence-tag">🛡️ Sécurité</div>
+                        <div class="competence-tag">🔐 VPN</div>
+                        <div class="competence-tag">👥 Active Directory</div>
+                        <div class="competence-tag">📡 Supervision</div>
+                        <div class="competence-tag">📄 Documentation</div>
+                    </div>
+                </div>
+
+                <!-- Documentation - Colonnes -->
+                <div class="projet-section">
+                    <h4 class="section-title">11) Documentation</h4>
+                    <div class="documentation-grid">
+                        <div class="doc-category">
+                            <h5>📋 A. Cahier des charges / Expression des besoins</h5>
+                            <ul class="doc-list">
+                                <li>AP4 Sécurité civile : <a href="dossier%20ap4/AP4_cas_securite_civile-2025_IFIDE.pdf" target="_blank" rel="noopener">AP4_cas_securite_civile-2025_IFIDE.pdf</a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-category">
+                            <h5>🔐 B. Référentiels & annexes</h5>
+                            <ul class="doc-list">
+                                <li>Organigramme DGSCGC : <a href="dossier%20ap4/ANNEXE-1-organigramme-dgscgc.pdf" target="_blank" rel="noopener">ANNEXE-1-organigramme-dgscgc.pdf</a></li>
+                                <li>Politique de filtrage pare-feu (ANSSI) : <a href="dossier%20ap4/ANNEXE-2-NP_Politique_pare_feu_NoteTech.pdf" target="_blank" rel="noopener">ANNEXE-2-NP_Politique_pare_feu_NoteTech.pdf</a></li>
+                                <li>Plan ORSEC : <a href="dossier%20ap4/ANNEXE-3-plaquette%20ORSEC.pdf" target="_blank" rel="noopener">ANNEXE-3-plaquette ORSEC.pdf</a></li>
+                                <li>Zone de défense Est : <a href="dossier%20ap4/ANNEXE-4-Plaquette-Pr%C3%A9sentation-PZDSE.pdf" target="_blank" rel="noopener">ANNEXE-4-Plaquette-Présentation-PZDSE.pdf</a></li>
+                                <li>PSC : <a href="dossier%20ap4/ANNEXE-5-PSC-Pr%C3%A9vention-Secours-Citoyen.pdf" target="_blank" rel="noopener">ANNEXE-5-PSC-Prévention-Secours-Citoyen.pdf</a></li>
+                                <li>Orientation SIC : <a href="dossier%20ap4/ANNEXE-6-orientation-SIC.pdf" target="_blank" rel="noopener">ANNEXE-6-orientation-SIC.pdf</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="projet-links">
-                    <a href="documents/[documentation].pdf" class="btn-projet" target="_blank">Documentation</a>
+                    <a href="dossier%20ap4/AP4_cas_securite_civile-2025_IFIDE.pdf" class="btn-projet" target="_blank" rel="noopener">Documentation complète</a>
+                </div>
                 </div>
             </div>
         </div>

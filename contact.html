@@ -46,22 +46,26 @@
     <main>
       <section class="page-section">
         <h2>Contact</h2>
-        <form id="contact-form" method="POST" aria-label="Formulaire de contact">
-          <div class="form-group">
-            <label for="name" class="sr-only">Votre nom</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" required aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="email" class="sr-only">Votre email</label>
-            <input type="email" id="email" name="email" placeholder="Votre email" required aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="message" class="sr-only">Votre message</label>
-            <textarea id="message" name="message" placeholder="Votre message" rows="5" required aria-required="true"></textarea>
-          </div>
-          <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
-          <button type="submit" class="btn">Envoyer</button>
-        </form>
+        <div class="contact-card">
+          <div class="contact-icon" aria-hidden="true">in</div>
+          <h3>Restons en contact</h3>
+          <p class="contact-intro">
+            Pour toute prise de contact professionnelle, vous pouvez m'envoyer un message directement sur LinkedIn.
+          </p>
+          <a
+            class="btn-primary contact-link-btn"
+            href="https://www.linkedin.com/in/etienne-fouarge-3850281a6"
+            target="_blank"
+            rel="noopener"
+          >
+            Voir mon profil LinkedIn
+          </a>
+          <p class="contact-link-text">
+            <a href="https://www.linkedin.com/in/etienne-fouarge-3850281a6" target="_blank" rel="noopener">
+              linkedin.com/in/etienne-fouarge-3850281a6
+            </a>
+          </p>
+        </div>
       </section>
     </main>
 
