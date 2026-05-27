@@ -1372,6 +1372,11 @@ footer p {
   object-fit: contain;
 }
 
+.certification-logo--wide {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
 .certification-box h3 {
   font-size: 1.2rem;
   color: var(--primary-color);
